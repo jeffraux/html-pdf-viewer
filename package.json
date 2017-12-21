@@ -7,7 +7,7 @@
   "browser": "dist/html-to-pdf.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeffraux/html-to-pdf.git"
+    "url": "git+https://github.com/auxcalibur/html-to-pdf.git"
   },
   "keywords": [
     "javascript",
@@ -19,13 +19,13 @@
   "author": {
     "name": "Jefferson Aux",
     "email": "auxcalibur@gmail.com",
-    "url": "https://github.com/jeffraux"
+    "url": "https://github.com/auxcalibur"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeffraux/html-to-pdf/issues"
+    "url": "https://github.com/auxcalibur/html-to-pdf/issues"
   },
-  "homepage": "https://github.com/jeffraux/html-to-pdf",
+  "homepage": "https://github.com/auxcalibur/html-to-pdf",
   "dependencies": {
     "html2canvas": "https://github.com/eKoopmans/html2canvas/tarball/develop",
     "jspdf": "^1.3.5",
