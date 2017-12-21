@@ -22,7 +22,7 @@ function license(filename) {
 export default [
   // Un-bundled builds.
   {
-    name: 'html-to-pdf',
+    name: 'html-2-pdf',
     input: 'src/index.js',
     output: [
       { file: pkg.main, format: 'cjs' },
@@ -47,7 +47,7 @@ export default [
   },
   // Un-bundled builds (minified).
   {
-    name: 'html-to-pdf',
+    name: 'html-2-pdf',
     input: 'src/index.js',
     output: [
       { file: pkg.browser.replace(/js$/, 'min.js'), format: 'umd' }
@@ -72,7 +72,7 @@ export default [
   },
   // Bundled builds.
   {
-    name: 'html-to-pdf',
+    name: 'html-2-pdf',
     input: 'src/index.js',
     output: [
       { file: pkg.browser.replace(/js$/, 'bundle.js'), format: 'umd' }
@@ -90,7 +90,7 @@ export default [
   },
   // Bundled builds (minified).
   {
-    name: 'html-to-pdf',
+    name: 'html-2-pdf',
     input: 'src/index.js',
     output: [
       { file: pkg.browser.replace(/js$/, 'bundle.min.js'), format: 'umd' }

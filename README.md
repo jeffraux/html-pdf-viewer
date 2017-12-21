@@ -1,2 +1,2 @@
-# html-to-pdf
-Client-side rendering of HTML-to-PDF
+# html-2-pdf
+Client-side rendering of html-2-pdf
