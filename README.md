@@ -1,2 +1,2 @@
-# html-2-pdf
-Client-side rendering of html-2-pdf
+# html-pdf-viewer
+Client-side rendering of html-pdf-viewer
