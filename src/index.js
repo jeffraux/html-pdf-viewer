@@ -8,6 +8,7 @@ import 'es6-promise/auto';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import './jspdf-plugin.js';
+import $ from 'jquery';
 import { objType, createElement, cloneNode, unitConvert } from './utils.js';
 
 /**
@@ -54,16 +55,12 @@ var htmlpdfviewer = function(source, opt) {
   // Render the canvas and pass the result to makePDF.
   var onRendered = opt.html2canvas.onrendered || function() {};
   delete opt.html2canvas.onrendered;
-  var uristring = "";
-
   var done = function(canvas) {
     onRendered(canvas);
     document.body.removeChild(overlay);
-    uristring = htmlpdfviewer.makePDF(canvas, pageSize, opt);
+    htmlpdfviewer.makePDF(canvas, pageSize, opt);
   };
   html2canvas(container, opt.html2canvas).then(done);
-
-  return uristring;
 };
 
 htmlpdfviewer.parseInput = function(source, opt) {
@@ -207,14 +204,13 @@ htmlpdfviewer.makePDF = function(canvas, pageSize, opt) {
         break;
       case 'display':
         {
-          // if (container) {
-          //   if (height) {
-          //     $(container).attr('height', height);
-          //   }
+          if (container) {
+            if (height) {
+              $(container).attr('height', height);
+            }
 
-          //   $(container).attr('src', pdf.output('datauristring'));
-          // }
-          return pdf.output('datauristring');
+            $(container).attr('src', pdf.output('datauristring'));
+          }
         }
         break;
     }
