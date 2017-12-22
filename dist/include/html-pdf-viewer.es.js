@@ -1,5 +1,5 @@
 /**
- * html-pdf-viewer v1.0.3
+ * html-pdf-viewer v1.0.4
  * Copyright (c) 2017 Jefferson Aux
  * Released under the MIT License.
  */
@@ -379,11 +379,13 @@ htmlpdfviewer.makePDF = function (canvas, pageSize, opt) {
         break;
       case 'display':
         {
-          if (height) {
-            $(container).attr('height', height);
-          }
+          if (container) {
+            if (height) {
+              $(container).attr('height', height);
+            }
 
-          $(container).attr('src', pdf.output('datauristring'));
+            $(container).attr('src', pdf.output('datauristring'));
+          }
         }
         break;
     }
