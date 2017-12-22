@@ -1,5 +1,5 @@
 /**
- * html-pdf-viewer v1.0.1
+ * html-pdf-viewer v1.0.3
  * Copyright (c) 2017 Jefferson Aux
  * Released under the MIT License.
  */

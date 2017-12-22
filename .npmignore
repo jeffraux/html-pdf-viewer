@@ -3,3 +3,4 @@ node_modules/
 .devel/
 dist/*.bundle*.js
 dist/**/*.min.js
+.babelrc
