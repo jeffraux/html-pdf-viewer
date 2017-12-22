@@ -15,7 +15,7 @@ import htmlpdfviewer from 'html-pdf-viewer';
 
 ## Usage
 
-Simplest way to use `mode: 'save'`:
+Simplest way to use:
 
 ```js
 var html = document.getElementById('html');
@@ -23,7 +23,7 @@ var html = document.getElementById('html');
 htmlpdfviewer(html);
 ```
 
-Simplest way to use `mode: 'display'`:
+Using `mode: 'display'` to display it on a page:
 
 ```js
 var html = document.getElementById('html');
