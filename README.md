@@ -15,7 +15,7 @@ import htmlpdfviewer from 'html-pdf-viewer';
 
 ## Usage
 
-Simplest way:
+Simplest way to use `mode: 'save'`:
 
 ```js
 var html = document.getElementById('html');
@@ -23,11 +23,23 @@ var html = document.getElementById('html');
 htmlpdfviewer(html);
 ```
 
+Simplest way to use `mode: 'display'`:
+
+```js
+var html = document.getElementById('html');
+
+htmlpdfviewer(html, { output: { mode: 'display', container: '#iframeId', height: 800 } });
+
+<iframe src="" id="iframeId" frameBorder="0"></iframe>
+```
+
+## Usage in ReactJS
+
 Implementation in ReactJS:
 
 ```js
 viewPdf = () => {
-  htmlpdfviewer(this.output);
+  htmlpdfviewer(this.output, { output: { mode: 'display', container: '#iframeId', height: 800 } });
 }
 
 * * *
@@ -35,6 +47,8 @@ viewPdf = () => {
 <div ref={(output) => { this.output = output }}>
   <h2 classname="ui header">Hello world!</h2>
 </div>
+
+<iframe src="" id="iframeId" frameBorder="0"></iframe>
 
 <Button onClick={() => this.viewPdf()} type="button">View PDF</Button>
 ```
