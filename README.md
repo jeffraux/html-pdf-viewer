@@ -42,12 +42,12 @@ Implementation in ReactJS:
 
 ```js
 viewPdf = () => {
-  htmlpdfviewer(this.output, { output: { mode: 'display', container: '#iframeId', height: 800 } });
+  htmlpdfviewer(this.html, { output: { mode: 'display', container: '#iframeId', height: 800 } });
 }
 
 * * *
 
-<div ref={(output) => { this.output = output }}>
+<div ref={(html) => { this.html = html }}>
   <h2 classname="ui header">Hello world!</h2>
 </div>
 
