@@ -185,18 +185,21 @@ var unitConvert = function unitConvert(obj, k) {
   return newObj;
 };
 
-/**
- * Generate a PDF from an HTML element or string using html2canvas and jsPDF.
- *
- * @param {Element|string} source The source element or HTML string.
- * @param {Object=} opt An object of optional settings: 'margin', 'filename',
- *    'image' ('type' and 'quality'), and 'html2canvas' / 'jspdf', which are
- *    sent as settings to their corresponding functions.
+/**!
+ * html-pdf-viewer.js v1.0.3
+ * @copyright-Copyright (c) 2017 Jefferson Aux
+ * @license-Licensed under MIT license
  */
-var html2pdf = function html2pdf(source, opt) {
+
+/**
+ * Credits to html2pdf.js v0.8.2
+ * by Erik Koopmans
+ */
+
+var htmlpdfviewer = function htmlpdfviewer(source, opt) {
   // Handle input.
   opt = objType(opt) === 'object' ? opt : {};
-  var source = html2pdf.parseInput(source, opt);
+  var source = htmlpdfviewer.parseInput(source, opt);
 
   // Determine the PDF page size.
   var pageSize = jsPDF.getPageSize(opt.jsPDF);
@@ -207,7 +210,7 @@ var html2pdf = function html2pdf(source, opt) {
   pageSize.inner.ratio = pageSize.inner.height / pageSize.inner.width;
 
   // Copy the source element into a PDF-styled container div.
-  var container = html2pdf.makeContainer(source, pageSize);
+  var container = htmlpdfviewer.makeContainer(source, pageSize);
   var overlay = container.parentElement;
 
   // Get the locations of all hyperlinks.
@@ -235,12 +238,12 @@ var html2pdf = function html2pdf(source, opt) {
   var done = function done(canvas) {
     onRendered(canvas);
     document.body.removeChild(overlay);
-    html2pdf.makePDF(canvas, pageSize, opt);
+    htmlpdfviewer.makePDF(canvas, pageSize, opt);
   };
   html2canvas(container, opt.html2canvas).then(done);
 };
 
-html2pdf.parseInput = function (source, opt) {
+htmlpdfviewer.parseInput = function (source, opt) {
   // Parse the opt object.
   opt.jsPDF = opt.jsPDF || {};
   opt.html2canvas = opt.html2canvas || {};
@@ -284,7 +287,7 @@ html2pdf.parseInput = function (source, opt) {
   return source;
 };
 
-html2pdf.makeContainer = function (source, pageSize) {
+htmlpdfviewer.makeContainer = function (source, pageSize) {
   // Define the CSS styles for the container and its overlay parent.
   var overlayCSS = {
     position: 'fixed', overflow: 'hidden', zIndex: 1000,
@@ -301,14 +304,14 @@ html2pdf.makeContainer = function (source, pageSize) {
   overlayCSS.opacity = 0;
 
   // Create and attach the elements.
-  var overlay = createElement('div', { className: 'html2pdf__overlay', style: overlayCSS });
-  var container = createElement('div', { className: 'html2pdf__container', style: containerCSS });
+  var overlay = createElement('div', { className: 'htmlpdfviewer__overlay', style: overlayCSS });
+  var container = createElement('div', { className: 'htmlpdfviewer__container', style: containerCSS });
   container.appendChild(source);
   overlay.appendChild(container);
   document.body.appendChild(overlay);
 
   // Enable page-breaks.
-  var pageBreaks = source.querySelectorAll('.html2pdf__page-break');
+  var pageBreaks = source.querySelectorAll('.htmlpdfviewer__page-break');
   var pxPageHeight = pageSize.inner.height * pageSize.k / 72 * 96;
   Array.prototype.forEach.call(pageBreaks, function (el) {
     el.style.display = 'block';
@@ -320,7 +323,7 @@ html2pdf.makeContainer = function (source, pageSize) {
   return container;
 };
 
-html2pdf.makePDF = function (canvas, pageSize, opt) {
+htmlpdfviewer.makePDF = function (canvas, pageSize, opt) {
   // Calculate the number of pages.
   var ctx = canvas.getContext('2d');
   var pxFullHeight = canvas.height;
@@ -394,6 +397,6 @@ html2pdf.makePDF = function (canvas, pageSize, opt) {
   }
 };
 
-return html2pdf;
+return htmlpdfviewer;
 
 })));
