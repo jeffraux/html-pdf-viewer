@@ -1,6 +1,6 @@
 {
   "name": "html-pdf-viewer",
-  "version": "0.0.1",
+  "version": "1.0.2",
   "description": "Client-side rendering of html-pdf-viewer",
   "main": "dist/require/html-pdf-viewer.cjs.js",
   "module": "dist/include/html-pdf-viewer.es.js",
@@ -16,11 +16,7 @@
     "client-side",
     "canvas"
   ],
-  "author": {
-    "name": "Jefferson Aux",
-    "email": "auxcalibur@gmail.com",
-    "url": "https://github.com/auxcalibur"
-  },
+  "author": "Jefferson Aux <auxcalibur@gmail.com> (https://github.com/auxcalibur)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/auxcalibur/html-pdf-viewer/issues"
