@@ -33,7 +33,8 @@ htmlpdfviewer(html, { output: { mode: 'display', container: '#iframeId', height:
 <iframe src="" id="iframeId" frameBorder="0"></iframe>
 ```
 
-See [examples](https://github.com/auxcalibur/html-pdf-viewer/tree/master/examples)
+See [examples](https://github.com/auxcalibur/html-pdf-viewer/tree/master/examples).
+
 
 ## Usage in ReactJS
 
