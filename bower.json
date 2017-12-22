@@ -1,6 +1,6 @@
 {
   "name": "html-pdf-viewer",
-  "description": "Client-side rendering of html-pdf-viewer",
+  "description": "Client-side rendering of html to pdf with save and display options",
   "main": "dist/html-pdf-viewer.bundle.js",
   "moduleType": [
     "amd",
@@ -25,6 +25,7 @@
     "node_modules/",
     "bower_components/",
     ".archive/",
-    ".devel/"
+    ".devel/",
+    ".babelrc"
   ]
 }
