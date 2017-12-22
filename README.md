@@ -52,6 +52,8 @@ The `options` parameter has the following optional fields:
 |jsPDF       |object          |{ }                           |Configuration options sent directly to `jsPDF` ([see here](http://rawgit.com/MrRio/jsPDF/master/docs/jsPDF.html) for usage).|
 |output      |object          |{ }                           |Configuration options for saving/displaying the pdf. `mode`: `save` or `display`. `container`: Iframe element id on where you want to display the PDF. `height`: Display height of the iframe. |
 
+NOTE: `container` is required if you choose `mode: display`.
+
 ## Credits
 
 [Jefferson Aux](https://github.com/jeffraux)

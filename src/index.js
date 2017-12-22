@@ -176,8 +176,7 @@ htmlpdfviewer.makePDF = function(canvas, pageSize, opt) {
     // Add the page to the PDF.
     if (page)  pdf.addPage();
     var imgData = pageCanvas.toDataURL('image/' + opt.image.type, opt.image.quality);
-    pdf.addImage(imgData, opt.image.type, opt.margin[1], opt.margin[0],
-                 pageSize.inner.width, pageHeight);
+    pdf.addImage(imgData, opt.image.type, opt.margin[1], opt.margin[0], pageSize.inner.width, pageHeight);
 
     // Add hyperlinks.
     if (opt.enableLinks) {
@@ -204,11 +203,13 @@ htmlpdfviewer.makePDF = function(canvas, pageSize, opt) {
         break;
       case 'display':
         {
-          if (height) {
-            $(container).attr('height', height);
-          }
+          if (container) {
+            if (height) {
+              $(container).attr('height', height);
+            }
 
-          $(container).attr('src', pdf.output('datauristring'));
+            $(container).attr('src', pdf.output('datauristring'));
+          }
         }
         break;
     }
