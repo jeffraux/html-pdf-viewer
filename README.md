@@ -18,9 +18,9 @@ import htmlpdfviewer from 'html-pdf-viewer';
 Simplest way:
 
 ```js
-var element = document.getElementById('element-to-print');
+var html = document.getElementById('html');
 
-htmlpdfviewer(element);
+htmlpdfviewer(html);
 ```
 
 ## Options
@@ -28,9 +28,9 @@ htmlpdfviewer(element);
 html-pdf-viewer can be configured by adding an optional `options` parameter: `htmlpdfviewer(<source>, {<options>});`
 
 ```js
-var element = document.getElementById('element-to-print');
+var html = document.getElementById('html');
 
-htmlpdfviewer(element, {
+htmlpdfviewer(html, {
   margin:       1,
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
