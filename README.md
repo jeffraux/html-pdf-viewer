@@ -44,8 +44,6 @@ viewPdf = () => {
 html-pdf-viewer can be configured by adding an optional `options` parameter: `htmlpdfviewer(<source>, {<options>});`
 
 ```js
-var html = document.getElementById('html');
-
 htmlpdfviewer(html, {
   margin:       1,
   filename:     'myfile.pdf',
