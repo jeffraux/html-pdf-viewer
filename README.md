@@ -23,6 +23,22 @@ var html = document.getElementById('html');
 htmlpdfviewer(html);
 ```
 
+Implementation in ReactJS:
+
+```js
+viewPdf = () => {
+  htmlpdfviewer(this.output);
+}
+
+* * *
+
+<div ref={(output) => { this.output = output }}>
+  <h2 classname="ui header">Hello world!</h2>
+</div>
+
+<Button onClick={() => this.viewPdf()} type="button">View PDF</Button>
+```
+
 ## Options
 
 html-pdf-viewer can be configured by adding an optional `options` parameter: `htmlpdfviewer(<source>, {<options>});`
