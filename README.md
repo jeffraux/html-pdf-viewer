@@ -1,5 +1,5 @@
 # html-pdf-viewer
-Client-side rendering of html to pdf with display and save options. This project is heavily based on [html2pdf](https://github.com/eKoopmans/html2pdf). You should check it out if you don't need the additional option of displaying the PDF onto your page.
+Client-side rendering of html to pdf with display and save options.
 
 ## Getting Started
 
