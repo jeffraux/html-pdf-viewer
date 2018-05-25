@@ -87,7 +87,7 @@ NOTE: `container` is required if you choose `mode: display`.
 
 ## Credits
 
-[Jefferson Aux](https://github.com/jeffraux)
+[Jefferson Aux](https://github.com/auxcalibur)
 
 ## License
 
