@@ -1,6 +1,6 @@
 {
   "name": "html-pdf-viewer",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Client-side rendering of html-pdf-viewer",
   "main": "dist/require/html-pdf-viewer.cjs.js",
   "module": "dist/include/html-pdf-viewer.es.js",
