@@ -33,7 +33,7 @@ htmlpdfviewer(html, { output: { mode: 'display', container: '#iframeId', height:
 <iframe src="" id="iframeId" frameBorder="0"></iframe>
 ```
 
-See [examples](https://github.com/auxcalibur/html-pdf-viewer/tree/master/examples).
+See [examples](https://github.com/jeffraux/html-pdf-viewer/tree/master/examples).
 
 
 ## Usage in ReactJS
@@ -87,7 +87,7 @@ NOTE: `container` is required if you choose `mode: display`.
 
 ## Credits
 
-[Jefferson Aux](https://github.com/auxcalibur)
+[Jefferson Aux](https://github.com/jeffraux)
 
 ## License
 
