@@ -7,7 +7,7 @@
   "browser": "dist/html-pdf-viewer.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/auxcalibur/html-pdf-viewer.git"
+    "url": "git+https://github.com/jeffraux/html-pdf-viewer.git"
   },
   "keywords": [
     "javascript",
@@ -16,12 +16,12 @@
     "client-side",
     "canvas"
   ],
-  "author": "Jefferson Aux <auxcalibur@gmail.com> (https://github.com/auxcalibur)",
+  "author": "Jefferson Aux <auxcalibur@gmail.com> (https://github.com/jeffraux)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/auxcalibur/html-pdf-viewer/issues"
+    "url": "https://github.com/jeffraux/html-pdf-viewer/issues"
   },
-  "homepage": "https://github.com/auxcalibur/html-pdf-viewer",
+  "homepage": "https://github.com/jeffraux/html-pdf-viewer",
   "dependencies": {
     "es6-promise": "^4.1.1",
     "html2canvas": "https://github.com/eKoopmans/html2canvas/tarball/develop",
